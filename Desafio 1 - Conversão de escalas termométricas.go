@@ -6,6 +6,7 @@ import "fmt"
 
 //declaração da variável CONST do ponto de ebulição da água em F
 const ebulicaoF = 212
+const ebulicaoK = 373.0
 
 //função principal
 func main() {
@@ -14,9 +15,12 @@ func main() {
 	tempFC := 0
 	tempF := ebulicaoF            // variável do valor da temperatura em graus F
 	tempC := (tempF - 32) * 5 / 9 //Conversão de F para C
+	tempK := ebulicaoK
+	tempKToC := tempK - 273.0
 	//apareça na tela o resultado
 	fmt.Printf("A temperatura de ebulição da água em °F = %v (%T), temperatura de ebulição da água em °C =%v (%T) .", tempF, tempF, tempC, tempC)
 	fmt.Printf("A temperatura de fusão da água em °F = %v (%T), e a temperatura de fusão da água em °C é = %v (%T). ", tempFF, tempFF, tempFC, tempFC)
 	// A gente espera que apareça F = 212 e C = 100
 
+	fmt.Printf("A temperatura de ebulição da água em °K = %g (%T), e a temperatura de ebulição da água em °C = %v (%T) .", tempK, tempK, tempKToC, tempKToC)
 }
